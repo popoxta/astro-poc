@@ -4,7 +4,9 @@
     "moduleResolution": "node",
     "types": [
       "vite/client"
-    ]
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   },
   "plugins": [
     {
