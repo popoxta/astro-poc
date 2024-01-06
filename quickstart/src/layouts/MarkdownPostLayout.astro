@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Tags from "../components/Tags.astro";
 const {frontmatter} = Astro.props
+const tags = frontmatter.tags
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <h1>{frontmatter.title}</h1>
     <sub>{frontmatter.description}</sub>
+    {tags &&
+            <Tags tags={tags}/>}
     <hr>
     <p>Written by {frontmatter.author}</p>
     <p>Published on {frontmatter.pubDate.slice(0, 10)}</p>
